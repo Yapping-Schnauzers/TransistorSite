@@ -32,6 +32,11 @@ body, html {
     position: fixed;
 }
 
+/* Overrides default styling on transistor. */
+.container {
+    max-width: 1200px;
+}
+
 h2 {
   text-decoration: solid underline var(--base-font-colour) 3px;
 }
@@ -50,7 +55,7 @@ div>strong {
 }
 
 .sub {
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 .story {
@@ -95,8 +100,7 @@ div>h3 {
     row-gap: 1rem;
     align-items: center;
     padding: 1rem 2rem;
-    max-width: 90%;
-    width: 30%;
+    max-width: 30%;
 }
 
 .icon {
@@ -129,6 +133,11 @@ div>h3 {
     }
 
     .story {
-        padding: -1rem 0;
+        width: 100%;
+        padding: .1rem 0;
+    }
+
+    .info_card {
+        min-width: 95%;
     }
 }
