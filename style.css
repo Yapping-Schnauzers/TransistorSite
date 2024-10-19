@@ -1,0 +1,99 @@
+:root {
+    --base-font-colour: #272727;
+    --light-font-colour: #ccc;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--base-font-colour);
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background-color: var(light-font-colour);
+}
+
+body, html {
+    height: 100vh;
+    width: 100vw;
+    font-size: 16px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: fixed;
+}
+
+/* For mobile phones */
+@media only screen and (max-width: 820px) {
+    .about-custom {
+        font-size: 3em;
+    }
+
+    .story {
+        padding: 1rem .1rem;
+    }
+}
+
+.about-custom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 1rem 5rem;
+    font-size: 1.1em;
+}
+
+.sub {
+    margin-top: 2rem;
+}
+
+.story {
+    padding: 1rem 4rem;
+}
+
+/* All direct children of div with story class. */
+.story>* {
+    margin: 1rem 0;
+}
+
+/* h2 elements that are direct children of divs. */
+div>h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* h3 elements that are direct children of divs. */
+div>h3 {
+    text-align: center;
+}
+
+.pic {
+    border-radius: 100px;
+}
+
+.profiles {
+    max-width: 95%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 2rem;
+}
+
+.info_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 1rem;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 90%;
+}
+
+/* Hacky, closes gap between large margins set by parent elements */
+.escape-margin {
+    margin-top: -1.25rem;
+}
