@@ -37,6 +37,14 @@ body, html {
     max-width: 1200px;
 }
 
+.show {
+    margin-top: -2rem;
+    margin-right: -.5rem;
+    height: 120dvh;
+    width: 100dvw;
+    animation: fade-in 0.2s ease-in forwards;
+}
+
 h2 {
   text-decoration: solid underline var(--base-font-colour) 3px;
 }
@@ -45,7 +53,7 @@ h2 {
 div>strong {
     font-size: 3rem;
   }
-
+ 
 .about-custom {
     display: flex;
     flex-direction: column;
@@ -140,4 +148,16 @@ div>h3 {
     .info_card {
         min-width: 95%;
     }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+
+  100% {
+    opacity: 1;
+    display: block;
+  }
 }

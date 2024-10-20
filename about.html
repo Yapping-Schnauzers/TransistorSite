@@ -1,36 +1,37 @@
 <htmL>
     <head>
         <meta charset="utf-8">
-<title>Yapping Schnauzers</title>
-<meta name="description" content="Yap-worthy Entertainment. Podcasts. Literary Journal. Entertainers. Community Builders. Loving fur-parents.">
-<meta name="keywords" context="Podcast Entertainment Yapping Schnauzers Horror Connecticut Comedy">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function(){
-        function toggleScrolling() {
-            if ($('.show').length > 0) {
-                $('body').css('overflow', 'hidden');
-            } else {
-                $('body').css('overflow', '');
-            }
-        }
+        <title>Yapping Schnauzers</title>
+        <meta name="description" content="Yap-worthy Entertainment. Podcasts. Literary Journal. Entertainers. Community Builders. Loving fur-parents.">
+        <meta name="keywords" context="Podcast Entertainment Yapping Schnauzers Horror Connecticut Comedy">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                function toggleScrolling() {
+                    if ($('.show').length > 0) {
+                        $('body').css('overflow', 'hidden');
+                    } else {
+                        $('body').css('overflow', '');
+                    }
+                }
 
-        // Check at start of page load.
-        toggleScrolling();
+                // Check at start of page load.
+                toggleScrolling();
 
-        const observer = new MutationObserver(function(mutations) {
-                             mutations.forEach(function() {
-                                 toggleScrolling();
-                             });
-                         });
-       observer.observe(document.body, {
-           attributes: true,
-           childList: true,
-           subtree: true
-       });
-    });
-</script>
+                const observer = new MutationObserver(function(mutations) {
+                                        mutations.forEach(function() {
+                                            toggleScrolling();
+                                        });
+                                    });
+
+                observer.observe(document.body, {
+                    attributes: true,
+                    childList: true,
+                    subtree: true
+                });
+            });
+        </script>
     </head>
     <body>
         <!-- Below, to be pasted in Yapping Schnauzer's Transistor site, "/about" -->
