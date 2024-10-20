@@ -37,6 +37,7 @@ body, html {
     max-width: 1200px;
 }
 
+/* Overrides modal for responsive hamburger menu. */
 .show {
     margin-top: -2rem;
     margin-right: -.5rem;

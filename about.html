@@ -1,103 +1,168 @@
-<htmL>
-    <head>
-        <meta charset="utf-8">
-        <title>Yapping Schnauzers</title>
-        <meta name="description" content="Yap-worthy Entertainment. Podcasts. Literary Journal. Entertainers. Community Builders. Loving fur-parents.">
-        <meta name="keywords" context="Podcast Entertainment Yapping Schnauzers Horror Connecticut Comedy">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                function toggleScrolling() {
-                    if ($('.show').length > 0) {
-                        $('body').css('overflow', 'hidden');
-                    } else {
-                        $('body').css('overflow', '');
-                    }
-                }
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Yapping Schnauzers</title>
+    <meta
+      name="description"
+      content="Yap-worthy Entertainment. Podcasts. Literary Journal. Entertainers. Community Builders. Loving fur-parents."
+    />
+    <meta
+      name="keywords"
+      context="Podcast Entertainment Yapping Schnauzers Horror Connecticut Comedy"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        function toggleScrolling(element) {
+          if (typeof element != 'undefined') {
+            $("body").css("overflow", "hidden");
+          } else {
+            $("body").css("overflow", "");
+          }
+        }
 
-                // Check at start of page load.
-                toggleScrolling();
+        function createCenteredNavBar(element) {
+          var childrenExceptFirst = element.children().not(":first");
+          var newDiv = $("<div></div>");
+          newDiv.addClass("centered-fullscreen-nav");
 
-                const observer = new MutationObserver(function(mutations) {
-                                        mutations.forEach(function() {
-                                            toggleScrolling();
-                                        });
-                                    });
+          newDiv.append(childrenExceptFirst);
+          element.append(newDiv);
+        }
 
-                observer.observe(document.body, {
-                    attributes: true,
-                    childList: true,
-                    subtree: true
-                });
-            });
-        </script>
-    </head>
-    <body>
-        <!-- Below, to be pasted in Yapping Schnauzer's Transistor site, "/about" -->
-        <!-- If you see this... WOOF!
+        // Check at start of page load.
+        toggleScrolling();
+
+        const observer = new MutationObserver(function (mutations) {
+          mutations.forEach(function () {
+            let showElement = $(".show");
+            toggleScrolling(showElement);
+
+            if (typeof showElement != 'undefined') {
+              createCenteredNavBar(showElement);
+            }
+          });
+        });
+
+        observer.observe(document.body, {
+          attributes: true,
+          childList: true,
+          subtree: true,
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Below, to be pasted in Yapping Schnauzer's Transistor site, "/about" -->
+    <!-- If you see this... WOOF!
                             __
                 (\,-------'()'--o
                 (_    __    /~""
                 (_)_)  (_)_) 
         -->
-        <div class="about-custom">
-            <!-- Podcast Background Info -->
-            <div class="sub story_section">
-                <h2>Our Story</h2>
-                <div class="story">
-                    <p><strong>Welcome to The Yapping Schnauzers Podcast!</strong></p>
-                    <p>We're a quirky gang who love sharing our take on the most entertaining stories we find across the web—from Reddit deep dives to quirky tales. If you're into opinionated discussions, movies, and fun reads, you're in the right place!</p>
-                    <p>Join us as we bring the same unapologetic energy of our game nights and lively chats to your week, serving up fresh stories, reactions, and plenty of laughs.</p>
-                    <p>Tune in, unwind, and enjoy the show!</p>
-                </div>
-            </div>
-            <!-- Host Background Info -->
-            <div class="sub hosts_section">
-                <h2>Your Hosts</h2>
-                <div class="profiles">
-                    <div class="info_card">
-                        <a href='https://postimg.cc/3dDBfYvK' target='_blank'><img class="pic" src='https://i.postimg.cc/3dDBfYvK/erika-profile-cropped.jpg' alt='erika-profile-cropped'/></a>
-                        <h3>Erika Martinez</h3>
-                        <p>Constantly lurking on reddit. Loves to make people happy. Her dogs' favourite.</p>
-                    </div>
-                    <div class="info_card">
-                        <a href='https://postimg.cc/XXKNfy23' target='_blank'><img class="pic" src='https://i.postimg.cc/XXKNfy23/edgar-profile.jpg' alt='edgar-profile'/></a>
-                        <h3>Edgar Jr San Martin</h3>
-                        <p>Techie working behind the scenes. Has to have an opinion. Loving dog-father.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Our doggos' Background Info -->
-            <div class="sub schnauzers_section">
-                <h2>Our Schnauzers</h2>
-                <div class="profiles">
-                    <div class="info_card">
-                        <a href='https://postimg.cc/xksTzrgm' target='_blank'><img class="pic" src='https://i.postimg.cc/xksTzrgm/bella-profile.jpg' alt='bella-profile'/></a>
-                        <h3>Bella</h3>
-                        <p class="escape-margin">The Princess.</p>
-                    </div>
-                    <div class="info_card">
-                        <a href='https://postimg.cc/CzyD1DRg' target='_blank'><img class="pic" src='https://i.postimg.cc/CzyD1DRg/selena-profile.jpg' alt='selena-profile'/></a>
-                        <h3>Selena</h3>
-                        <p class="escape-margin">The Cuddle Bug.</p>
-                    </div>
-                    <div class="info_card">
-                        <a href='https://postimg.cc/231F3rT4' target='_blank'><img class="pic" src='https://i.postimg.cc/231F3rT4/lyla-profile.jpg' alt='lyla-profile'/></a>
-                        <h3>Lyla</h3>
-                        <p class="escape-margin">The Silly One.</p>
-                    </div>
-                </div>
-            </div>
+    <div class="about-custom">
+      <!-- Podcast Background Info -->
+      <div class="sub story_section">
+        <h2>Our Story</h2>
+        <div class="story">
+          <p><strong>Welcome to The Yapping Schnauzers Podcast!</strong></p>
+          <p>
+            We're a quirky gang who love sharing our take on the most
+            entertaining stories we find across the web—from Reddit deep dives
+            to quirky tales. If you're into opinionated discussions, movies, and
+            fun reads, you're in the right place!
+          </p>
+          <p>
+            Join us as we bring the same unapologetic energy of our game nights
+            and lively chats to your week, serving up fresh stories, reactions,
+            and plenty of laughs.
+          </p>
+          <p>Tune in, unwind, and enjoy the show!</p>
         </div>
-        <!-- Above here, paste to "/about" Transistor Site. -->
-        <footer>
-            <div class="footer">
-                <div class="socials">
-                     <a href="https://x.com/YSchnauzers" target="_blank"><img class="icon" src="https://logos-world.net/wp-content/uploads/2023/08/X-Logo.png" alt="X logo" /></a>
-                </div>
-                <p>© 2024 Yapping Schnauzers. All rights reserved.</p>
-            </div>
-        </footer>
-    </body>    
-</htmL>
+      </div>
+      <!-- Host Background Info -->
+      <div class="sub hosts_section">
+        <h2>Your Hosts</h2>
+        <div class="profiles">
+          <div class="info_card">
+            <a href="https://postimg.cc/3dDBfYvK" target="_blank"
+              ><img
+                class="pic"
+                src="https://i.postimg.cc/3dDBfYvK/erika-profile-cropped.jpg"
+                alt="erika-profile-cropped"
+            /></a>
+            <h3>Erika Martinez</h3>
+            <p>
+              Constantly lurking on reddit. Loves to make people happy. Her
+              dogs' favourite.
+            </p>
+          </div>
+          <div class="info_card">
+            <a href="https://postimg.cc/XXKNfy23" target="_blank"
+              ><img
+                class="pic"
+                src="https://i.postimg.cc/XXKNfy23/edgar-profile.jpg"
+                alt="edgar-profile"
+            /></a>
+            <h3>Edgar Jr San Martin</h3>
+            <p>
+              Techie working behind the scenes. Has to have an opinion. Loving
+              dog-father.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Our doggos' Background Info -->
+      <div class="sub schnauzers_section">
+        <h2>Our Schnauzers</h2>
+        <div class="profiles">
+          <div class="info_card">
+            <a href="https://postimg.cc/xksTzrgm" target="_blank"
+              ><img
+                class="pic"
+                src="https://i.postimg.cc/xksTzrgm/bella-profile.jpg"
+                alt="bella-profile"
+            /></a>
+            <h3>Bella</h3>
+            <p class="escape-margin">The Princess.</p>
+          </div>
+          <div class="info_card">
+            <a href="https://postimg.cc/CzyD1DRg" target="_blank"
+              ><img
+                class="pic"
+                src="https://i.postimg.cc/CzyD1DRg/selena-profile.jpg"
+                alt="selena-profile"
+            /></a>
+            <h3>Selena</h3>
+            <p class="escape-margin">The Cuddle Bug.</p>
+          </div>
+          <div class="info_card">
+            <a href="https://postimg.cc/231F3rT4" target="_blank"
+              ><img
+                class="pic"
+                src="https://i.postimg.cc/231F3rT4/lyla-profile.jpg"
+                alt="lyla-profile"
+            /></a>
+            <h3>Lyla</h3>
+            <p class="escape-margin">The Silly One.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Above here, paste to "/about" Transistor Site. -->
+    <footer>
+      <div class="footer">
+        <div class="socials">
+          <a href="https://x.com/YSchnauzers" target="_blank"
+            ><img
+              class="icon"
+              src="https://logos-world.net/wp-content/uploads/2023/08/X-Logo.png"
+              alt="X logo"
+          /></a>
+        </div>
+        <p>© 2024 Yapping Schnauzers. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
