@@ -14,21 +14,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        function toggleScrolling(element) {
-          if (typeof element != 'undefined') {
-            $("body").css("overflow", "hidden");
+        function toggleScrolling() {
+          let showElement = $(".show");
+          if (showElement.length > 0) {
+            $("body").css("overflow-y", "hidden !important");
           } else {
-            $("body").css("overflow", "");
+            $("body").css("overflow-y", "");
           }
-        }
-
-        function createCenteredNavBar(element) {
-          var childrenExceptFirst = element.children().not(":first");
-          var newDiv = $("<div></div>");
-          newDiv.addClass("centered-fullscreen-nav");
-
-          newDiv.append(childrenExceptFirst);
-          element.append(newDiv);
         }
 
         // Check at start of page load.
@@ -36,19 +28,12 @@
 
         const observer = new MutationObserver(function (mutations) {
           mutations.forEach(function () {
-            let showElement = $(".show");
-            toggleScrolling(showElement);
-
-            if (typeof showElement != 'undefined') {
-              createCenteredNavBar(showElement);
-            }
+            toggleScrolling();
           });
         });
 
         observer.observe(document.body, {
           attributes: true,
-          childList: true,
-          subtree: true,
         });
       });
     </script>

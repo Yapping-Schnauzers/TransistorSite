@@ -37,13 +37,31 @@ body, html {
     max-width: 1200px;
 }
 
-/* Overrides modal for responsive hamburger menu. */
 .show {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: -2rem;
-    margin-right: -.5rem;
-    height: 120dvh;
+    padding: 8px 16px !important;
+    height: 110dvh;
     width: 100dvw;
-    animation: fade-in 0.2s ease-in forwards;
+    animation: fade-in 0.3s ease-in forwards;
+    z-index: 100;
+}
+
+.show>a {
+    font-size: 32px;
+}
+
+#navClose {
+    top: 72px;
+    right: 26px;
+    position: absolute;
 }
 
 h2 {
@@ -155,10 +173,12 @@ div>h3 {
   0% {
     opacity: 0;
     display: none;
+    padding-top: 32px;
   }
 
   100% {
     opacity: 1;
     display: block;
+    padding-top: 0;
   }
 }
