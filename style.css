@@ -85,6 +85,11 @@ div>strong {
     margin-top: 4rem;
 }
 
+/* Give some breathing room between profile pic and Your Host header. */
+.sub>h2 {
+    margin-bottom: 4rem;
+}
+
 .story {
     padding: 1rem 4rem;
 }
@@ -105,10 +110,34 @@ div>h3 {
     text-align: center;
 }
 
+.profile-pic-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/* Give our names space to breathe from the paw print. */
+.profile-pic-wrapper + h3 {
+    margin-top: 1rem;
+}
+
 .pic {
+    position: relative;
+    top: 0;
+    left: 0;
     border-radius: 100px;
     min-height: 200px;
     min-width: 200px;
+}
+
+.paw-pic {
+    position: absolute;
+    top: -70px;
+    left: -65px;
+    min-width: 315px;
+    min-height: 315px;
+    transform: rotate(-20deg);
+    z-index: -1;
 }
 
 .doggo-pic {
