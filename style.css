@@ -37,6 +37,11 @@ body, html {
     max-width: 1200px;
 }
 
+/* Ensure logo always shows up, even when screen is overlayed. */
+.header__logo {
+    z-index: 101;
+}
+
 .show {
     top: 0;
     left: 0;
