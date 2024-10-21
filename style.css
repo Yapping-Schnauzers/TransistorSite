@@ -85,9 +85,13 @@ div>strong {
     margin-top: 4rem;
 }
 
+.sub, .story-section {
+    margin-top: 0;
+}
+
 /* Give some breathing room between profile pic and Your Host header. */
 .sub>h2 {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .story {
