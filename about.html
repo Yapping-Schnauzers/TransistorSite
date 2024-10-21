@@ -15,8 +15,7 @@
     <script>
       $(document).ready(function () {
         function toggleScrolling() {
-          let showElement = $(".show");
-          if (showElement.length > 0) {
+        if (typeof $(".show") != undefined) {
             $("body").css("overflow-y", "hidden !important");
           } else {
             $("body").css("overflow-y", "");

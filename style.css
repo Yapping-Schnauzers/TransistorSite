@@ -1,6 +1,7 @@
 :root {
     --base-font-colour: #272727;
     --light-font-colour: #ccc;
+    --clipart-opacity: .9;
 }
 
 * {
@@ -86,17 +87,25 @@ div>strong {
     font-size: 1.1em;
 }
 
-.sub {
-    margin-top: 4rem;
+.about-custom:first-child {
+    margin-top: 0;
 }
 
-.sub, .story-section {
-    margin-top: 0;
+.about-custom:last-child {
+    margin-bottom: 5rem;
+}
+
+.sub:not(:first-child) {
+        margin: 4rem auto;
+}
+
+.schnauzers-section {
+    margin-bottom: 8rem;
 }
 
 /* Give some breathing room between profile pic and Your Host header. */
 .sub>h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 .story {
@@ -111,7 +120,7 @@ div>strong {
 /* h2 elements that are direct children of divs. */
 div>h2 {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 
 /* h3 elements that are direct children of divs. */
@@ -145,12 +154,13 @@ div>h3 {
     left: -65px;
     min-width: 315px;
     min-height: 315px;
+    opacity: var(--clipart-opacity);
     transform: rotate(-20deg);
     z-index: -1;
 }
 
 .doggo-pic {
-    border: 5px solid #dd9a74;
+    border: 5px solid rgba(221, 154, 116, var(--clipart-opacity));
     padding: 10px;
 }
 
@@ -171,6 +181,10 @@ div>h3 {
     align-items: center;
     padding: 1rem 2rem;
     max-width: 30%;
+}
+
+.site-newsletter>h3 {
+    text-align: left;
 }
 
 .icon {
@@ -201,6 +215,14 @@ div>h3 {
         font-size: 2em;
         margin: .75rem 1rem;
     }
+
+    .story-section {
+         margin-top: 0 !important;
+    }
+
+    .escape-header-margin {
+        margin-bottom: 0 !important;
+     }
 
     .story {
         width: 100%;
