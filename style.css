@@ -2,6 +2,7 @@
     --base-font-colour: #272727;
     --light-font-colour: #ccc;
     --clipart-opacity: .9;
+    --bellini-colour: rgba(221, 154, 116, var(--clipart-opacity));
 }
 
 * {
@@ -160,7 +161,7 @@ div>h3 {
 }
 
 .doggo-pic {
-    border: 5px solid rgba(221, 154, 116, var(--clipart-opacity));
+    border: 5px solid var(--bellini-colour);
     padding: 10px;
 }
 
@@ -185,6 +186,16 @@ div>h3 {
 
 .site-newsletter>h3 {
     text-align: left;
+}
+
+input[type=text] {
+   border-width: 3px;
+   border-radius: 100px;
+   border-color: var(--bellini-colour);
+}
+
+input[type=text]:focus {
+    opacity: 1;
 }
 
 .icon {
