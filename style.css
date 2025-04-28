@@ -32,6 +32,17 @@ body, html {
     -ms-overflow-style: none;
     scrollbar-width: none;
     position: fixed;
+
+        /* background gradiant */
+    background: linear-gradient(180deg, #ffc9db 0%, #ffffff 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Remove background color for navbar and footer so gradiant can cover entire screen */
+.background {
+    background-color: transparent !important;
 }
 
 /* Overrides default styling on transistor. */
