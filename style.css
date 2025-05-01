@@ -33,16 +33,21 @@ body, html {
     scrollbar-width: none;
     position: fixed;
 
-        /* background gradiant */
+    /* Background gradient */
     background: linear-gradient(180deg, #ffc9db 0%, #ffffff 100%);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-/* Remove background color for navbar and footer so gradiant can cover entire screen */
+/* Ensure background gradient also covers navbar and footer. */
 .background {
-    background-color: transparent !important;
+    background-color: transparent;
+}
+
+/* Lighten up button texts to match gradient */
+button.site-button {
+    color: #ffc9db;
 }
 
 /* Overrides default styling on transistor. */
