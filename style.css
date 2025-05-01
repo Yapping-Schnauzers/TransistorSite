@@ -1,5 +1,6 @@
 :root {
     --base-font-colour: #272727;
+    --base-background-colour: #ffc9db;
     --light-font-colour: #ccc;
     --clipart-opacity: .9;
     --bellini-colour: rgba(221, 154, 116, var(--clipart-opacity));
@@ -14,7 +15,7 @@
 }
 
 *::selection {
-    background-color: var(light-font-colour);
+    background-color: var(--light-font-colour);
 }
 
 /* Make hovering over nav items "flashy" */
@@ -34,7 +35,7 @@ body, html {
     position: fixed;
 
     /* Background gradient */
-    background: linear-gradient(180deg, #ffc9db 0%, #ffffff 100%);
+    background: linear-gradient(180deg, var(--base-background-colour) 0%, #ffffff 100%);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -47,7 +48,7 @@ body, html {
 
 /* Lighten up button texts to match gradient */
 button.site-button {
-    color: #ffc9db;
+    color: var(--base-background-colour);
 }
 
 /* Overrides default styling on transistor. */
